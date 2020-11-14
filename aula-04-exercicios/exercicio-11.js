@@ -29,10 +29,10 @@ for (let i of vetor) {
 f = e.slice(0, 5);
 g = e.slice(-5);
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
-console.log(e);
-console.log(f);
-console.log(g);
+console.log("A:", a);
+console.log("B:", b);
+console.log("C:", c);
+console.log("D:", d);
+console.log("E:", e);
+console.log("F:", f);
+console.log("G:", g);
