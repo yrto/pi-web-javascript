@@ -18,33 +18,55 @@ let checkPenultimo = splitCheck1.pop();
 let splitCheck2 = cpfSplit.slice(0, 11);
 let checkUltimo = splitCheck2.pop();
 
-//
+// primeiro check
 
-const finalCheck = numeros => {
+console.log("CPF:", cpfSplit);
+console.log("Check 1:", splitCheck1);
+console.log("Penultimo:", checkPenultimo);
+console.log("Check 2:", splitCheck2);
+console.log("Último:", checkUltimo);
 
-  for
-  
+// declarando contadores
+
+let count10 = 10;
+let count11 = 11;
+
+// multiplicando elementos
+
+for (i in splitCheck1) {
+  splitCheck1[i] = splitCheck1[i] * count10;
+  count10--;
 }
 
-console.log(cpfSplit);
-console.log(splitCheck1);
-console.log(checkPenultimo);
-console.log(splitCheck2);
-console.log(checkUltimo);
+for (i in splitCheck2) {
+  splitCheck2[i] = splitCheck2[i] * count11;
+  count11--;
+}
 
-//
+// segundo check
 
-// let count1 = 10;
-// let soma1 = 0;
+console.log("Check 1 multiplicado:", splitCheck1);
+console.log("Check 2 multiplicado:", splitCheck2);
 
-// for (let i = 0; i < 9; i++) {
-//   cpfCheck[i] *= count1;
-//   soma1 += cpfCheck[i];
-//   count1--;
-// }
+// função para somar os elementos
 
-// console.log("Soma1 é:", soma1);
+function somaElementos(vetor) {
+  let soma = 0;
+  for (i of vetor) { soma += i; }
+  return soma;
+}
 
-// console.log(cpfCheck);
+console.log("Soma check 1:", somaElementos(splitCheck1));
+console.log("Soma check 2:", somaElementos(splitCheck2));
 
-// //
+// check final
+
+if ((somaElementos(splitCheck1) * 10) % 11 !== checkPenultimo) {
+  console.log("CPF inválido no check 1");
+}
+else if ((somaElementos(splitCheck2) * 10) % 11 !== checkUltimo) {
+  console.log("CPF inválido no check 2");
+}
+else {
+  console.log(`O CPF ${cpfOriginal} é válido!`)
+}

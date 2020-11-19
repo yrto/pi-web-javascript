@@ -7,7 +7,7 @@ function fatorial(num) {
 
 console.log(fatorial(5));
 
-// recursao - soma dos elementos d euma array
+// recursao - soma dos elementos de uma array
 
 function array_soma(array) {
   if (array.length === 0) return 0;
