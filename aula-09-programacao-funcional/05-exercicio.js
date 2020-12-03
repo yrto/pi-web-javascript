@@ -15,7 +15,7 @@ const impares = valor => valor % 2 !== 0
 function funcao_filtragem(funcao, array) {
   let novo_array = []
   for (let i of array) {
-    if (funcao(i) === true) novo_array.push(i)
+    if (funcao(i)) novo_array.push(i)
   }
   return novo_array
 }
