@@ -35,17 +35,15 @@ let people = [
 // bmi: que contém o IMC (Body Mass Index ou Índice de Massa Corporal) da pessoa (float)
 // classification: uma classificação simples do IMC da pessoa. Insira a string 'fora da faixa Normal', caso a pessoa tenha um IMC abaixo de 18,5 ou acima de 25. Insira a string 'Normal', caso a pessoa tenha um IMC entre 18,5 e 25.
 
-// "return ...person" retorna o objeto inteiro
+// "return ...person" retorna um objeto individual de determinado vetor
 
 people = people.map(
   person => {
-    let imc = person.weight / person.height ** 2
-    const classificacao = imc => imc >= 18.5 && imc <= 25 ? 'Normal' : 'Fora da faixa Normal'
+    const imc = parseFloat((person.weight / person.height ** 2).toFixed(2))
     return {
       ...person,
-      age: person.age + 300,
-      imc: parseFloat(imc.toFixed(2)),
-      classificacao: classificacao(imc)
+      imc,
+      classificacao: 18.5 < imc && imc < 25 ? 'Normal' : 'Fora da faixa Normal'
     }
   }
 )

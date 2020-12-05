@@ -2,7 +2,6 @@
 
 let array = [1, 2, 3, 4, 5]
 
-console.log("Original:")
 console.log(array)
 
 // filtros
@@ -22,6 +21,5 @@ function funcao_filtragem(funcao, array) {
 
 // testes
 
-console.log("Com filtro:")
 console.log(funcao_filtragem(pares, array))
 console.log(funcao_filtragem(impares, array))

@@ -22,14 +22,12 @@ console.log(vector_two);
 
 // Com os dois arrays, utilize a função map para multiplicá-los, elemento a elemento. É possível que os arrays tenham tamanhos diferentes, certo? Por isso, o array resultante deverá ter o tamanho do menor dos arrays.
 
-if (vector_one.length > vector_two.length) {
-  let vector_bucket = vector_one;
-  vector_one = vector_two;
-  vector_two = vector_bucket;
+function multiply_vector(vector_one, vector_two) {
+  return (vector_one.length > vector_two.length ? vector_two : vector_one).map(
+    (num, index) => num * (vector_one.length > vector_two.length ? vector_one : vector_two)[index]
+  )
 }
 
-let vector_tre = vector_one.map(
-  (num_1, index) => num_1 * vector_two[index]
-)
+let vector_tre = multiply_vector(vector_one, vector_two);
 
 console.log(vector_tre);
