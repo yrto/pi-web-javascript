@@ -8,8 +8,6 @@ const people = [
   { name: "Bob Ziroll", member: true }
 ]
 
-let club_only = people.filter(
-  person => person.member === true
-)
+let club_only = people.filter(person => person.member === true)
 
 console.log(club_only)

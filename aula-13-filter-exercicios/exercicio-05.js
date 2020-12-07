@@ -8,8 +8,6 @@ const people = [
   { name: "Bob Ziroll", age: 100 }
 ]
 
-let maiores_18 = people.filter(
-  person => person.age >= 18
-)
+let maiores_18 = people.filter(person => person.age >= 18)
 
 console.log(maiores_18)
