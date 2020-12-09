@@ -4,9 +4,6 @@
 
 const numbers = [1, 2, 3, 4]
 
-const concat_numbers = numbers.reduce(
-  (state, num) => state + num,
-  '' // estado inicial
-)
+const concat_numbers = numbers.reduce((state, num) => state + num, '')
 
 console.log(concat_numbers)
