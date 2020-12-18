@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.21.0",
+    "iso-639-1": "^2.1.4",
     "readline-sync": "^1.4.10"
   }
 }
